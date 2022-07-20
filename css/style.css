@@ -1,16 +1,16 @@
 /* GENERAL */
 
 body {
-    font-family: 'Raleway', sans-serif;  
+    font-family: 'Raleway', sans-serif;
     margin: 0 50px 50px 50px;
 }
 
-a{
+a {
     text-decoration: none;
     color: initial;
 }
 
-ul{
+ul {
     list-style-type: none;
     padding: 0;
     margin: 0;
@@ -24,25 +24,67 @@ header {
     justify-content: space-between;
 }
 
-#bloc_logobooki{
+#bloc_logobooki {
     display: flex;
     padding: 0;
 }
-.bloc_nav{
+
+.bloc_nav {
     display: flex;
     justify-content: center;
     align-items: center;
 }
 
-.bloc_nav a{
+.bloc_nav a {
     padding: 40px 30px;
 }
 
-.bloc_nav a:hover{
+.bloc_nav a:hover {
     color: #0065FC;
     border-top: 4px solid #0065FC;
     padding-top: 33px;
 }
 
+/* SEARCH BAR */
+
+/* FILTER */
+
+/* HOTEL */
+
+/* POPULAIRE */
+
+/* ACTIVITE */
+
+.bloc_activite {
+    height: 500px;
+    width: auto;
+    display: flex;
+    flex-flow: column wrap;
+    justify-content: space-between;
+}
+
+.bloc_activite div{
+    float: left;
+}
+
 /* FOOTER */
 
+footer {
+    display: flex;
+    padding: 20px 30px;
+    margin-top: 40px;
+    background-color: #f2f2f2;
+}
+
+footer div {
+    flex: 1;
+}
+
+footer li {
+    margin-bottom: 5px;
+}
+
+footer a:hover {
+    font-weight: 500;
+    color: #0065FC;
+}
