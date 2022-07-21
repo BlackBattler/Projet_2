@@ -1,9 +1,13 @@
 /* ------------------------------ FONT ------------------------------ */
 @import url('https://fonts.googleapis.com/css2?family=Raleway:wght@300;400;500;600;700;800;900&display=swap');
 
-/* #0065FC BLEU */
-/* #DEEBFF LIGHTBLEU */
-/* #F2F2F2 GRIS */
+
+/* ------------------------------ VARIABLES ------------------------------ */
+:root{
+    --colorBlue : #0065FC;
+    --colorLightBlue : #DEEBFF;
+    --colorGrey : #F2F2F2;
+}
 
 /* ------------------------------ GENERAL ------------------------------ */
 *{
@@ -57,8 +61,8 @@ a {
 }
 
 .blocNav a:hover{
-    border-top-color:#0065FC;
-    color: #0065FC;
+    border-top-color: var(--colorBlue);
+    color: var(--colorBlue);
 }
 
 #sectionRecherche{
@@ -83,13 +87,13 @@ a {
 
 .searchBar i {
     padding: 15px 15px;
-    background-color: #F2F2F2;
+    background-color: var(--colorGrey);
     border-radius: 12px 0px 0px 12px;
 }
 
 .searchBar input {
     flex-basis: 250px;
-    border: 1px solid #F2F2F2;
+    border: 1px solid var(--colorGrey);
     font-size: 16pt;
     padding: 0 12px;
     overflow: auto;
@@ -101,7 +105,7 @@ a {
 
 .searchBar button {
     padding: 0px 12px;
-    background-color: #0065FC;
+    background-color: var(--colorBlue);
     color: white;
     font-size: medium;
     font-weight: 500;
@@ -139,16 +143,16 @@ a {
 .blocFilter{
     display: flex;
     align-items: center;
-    border: 3px solid #F2F2F2;
+    border: 3px solid var(--colorGrey);
     border-radius: 50px;
     cursor: pointer;
 }
 
 .searchFilter .fa-solid{
     display: flex;
-    color: #0065FC;
+    color: var(--colorBlue);
     font-size: 25px;
-    background-color: #DEEBFF;
+    background-color: var(--colorLightBlue);
     border-radius: 50%;
     margin: -3px;
     width: 50px;
@@ -162,8 +166,8 @@ a {
 }
 
 .blocFilter:hover{
-    color: #0065FC;
-    background-color: #F2F2F2;
+    color: var(--colorBlue);
+    background-color: var(--colorGrey);
     transform: scale(1.03);
 }
 
@@ -177,10 +181,10 @@ a {
     display: flex;
     align-items: center;
     justify-content: center;
-    color: #0065FC;
+    color: var(--colorBlue);
     width: 30px;
     height: 30px;
-    border: 2px solid #F2F2F2;
+    border: 2px solid var(--colorGrey);
     border-radius: 50%;
 }
 
@@ -211,7 +215,7 @@ footer {
     display: flex;
     padding: 20px 30px;
     margin-top: 40px;
-    background-color: #f2f2f2;
+    background-color: var(--colorGrey);
 }
 
 footer div {
@@ -224,7 +228,7 @@ footer li {
 
 footer a:hover {
     font-weight: 500;
-    color: #0065FC;
+    color: var(--colorBlue);
 }
 
 /* ________________________________________ MEDIA QUERIES ________________________________________ */
@@ -251,7 +255,7 @@ footer a:hover {
 
     .searchBar button {
         padding: 0px 12px;
-        background-color: #0065FC;
+        background-color: var(--colorBlue);
         color: white;
         border-radius: 12px;
         border: 0;
@@ -285,13 +289,13 @@ footer a:hover {
     .blocNav a{
         padding: 15px;
         flex-basis: 50%;
-        border-bottom: 3px solid #F2F2F2;
+        border-bottom: 3px solid var(--colorGrey);
         text-align: center;
         font-size: 16pt;
     }
 
     .blocNav a:hover{
         border-top-color: transparent;
-        border-bottom-color:#0065FC;
+        border-bottom-color: var(--colorBlue);
     }
 }
