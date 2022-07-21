@@ -1,8 +1,14 @@
-/* ------------------------------GENERAL------------------------------ */
+/* ------------------------------ FONT ------------------------------ */
+@import url('https://fonts.googleapis.com/css2?family=Raleway:wght@300;400;500;600;700;800;900&display=swap');
 
-body {
-    font-family: 'Raleway', sans-serif;
-    padding: 0 20px;
+/* #0065FC BLEU */
+/* #DEEBFF LIGHTBLEU */
+/* #F2F2F2 GRIS */
+
+/* ------------------------------ GENERAL ------------------------------ */
+*{
+    box-sizing: border-box;
+    font-family: "Raleway", "sans-serif";
 }
 
 h1 {
@@ -22,34 +28,44 @@ h3 {
 
 a {
     text-decoration: none;
-    color: initial;
-}
-
-
-/* ------------------------------HEADER------------------------------ */
-header {
-    display: flex;
-    justify-content: space-between;
-}
-
-.bloc_nav {
-    display: flex;
-    justify-content: center;
-    align-items: center;
+    color: inherit;
     font-weight: 500;
 }
 
-.bloc_nav a {
-    padding: 40px 30px;
+/* ------------------------------ HEADER ------------------------------ */
+.headerNav {
+    display: flex;
+    align-items: center;
+    justify-content: flex-end;
+    flex-wrap: wrap;
+    margin-bottom: 20px;
 }
 
-.bloc_nav a:hover {
+.logoBooki{
+    padding-left: 25px;
+    margin-right: auto;
+}
+
+.blocNav{
+    display: flex;
+}
+
+.blocNav a{
+    padding: 25px;
+    border-top: 3px solid transparent;
+    font-size: 14pt;
+}
+
+.blocNav a:hover{
+    border-top-color:#0065FC;
     color: #0065FC;
-    border-top: 4px solid #0065FC;
-    padding-top: 25px;
 }
 
-/* ------------------------------SEARCH BAR TITLE------------------------------ */
+#sectionRecherche{
+    padding: 0 25px;
+    margin-bottom: 20px;
+}
+/* ------------------------------ SEARCH BAR TITLE ------------------------------ */
 .searchTitle h1 {
     margin-bottom: 10px;
 }
@@ -59,23 +75,24 @@ header {
 }
 
 
-/* ------------------------------SEARCH BAR------------------------------ */
+/* ------------------------------ SEARCH BAR ------------------------------ */
 .searchBar {
     display: flex;
     margin-bottom: 30px;
 }
 
 .searchBar i {
-    padding: 10px 12px;
+    padding: 15px 15px;
     background-color: #F2F2F2;
     border-radius: 12px 0px 0px 12px;
 }
 
 .searchBar input {
-    width: 250px;
+    flex-basis: 250px;
     border: 1px solid #F2F2F2;
-    font-size: medium;
+    font-size: 16pt;
     padding: 0 12px;
+    overflow: auto;
 }
 
 .searchBar input::placeholder {
@@ -91,30 +108,92 @@ header {
     border-radius: 0 12px 12px 0;
     border: 0;
     cursor: pointer;
+    opacity: 1;
+    transition: transform 100ms;
 }
 
 .searchBar button:hover {
-    background-color: #DEEBFF;
-    color: #0065FC;
-
+    opacity: 0.9;
+    transform: scale(1.01)
 }
 
 .searchBar button:active {
-    background-color: #0065FC;
-    color: white;
+    transform: scale(1);
 }
 
-/* ------------------------------FILTER------------------------------ */
+.fa-solid.fa-magnifying-glass{
+    display: none;
+}
+
+/* ------------------------------ FILTER ------------------------------ */
 .searchFilter {
     display: flex;
+    flex-wrap: wrap;
+    align-items: center;
+    margin-bottom: 40px;
+    font-weight: 700;
+    font-size: 14pt;
+    gap: 25px;
 }
 
-/* ------------------------------HOTEL------------------------------ */
+.blocFilter{
+    display: flex;
+    align-items: center;
+    border: 3px solid #F2F2F2;
+    border-radius: 50px;
+    cursor: pointer;
+}
 
-/* ------------------------------POPULAIRE------------------------------ */
+.searchFilter .fa-solid{
+    display: flex;
+    color: #0065FC;
+    font-size: 25px;
+    background-color: #DEEBFF;
+    border-radius: 50%;
+    margin: -3px;
+    width: 50px;
+    height: 50px;
+    align-items: center;
+    justify-content: center;
+}
 
-/* ------------------------------ACTIVITE------------------------------ */
+.searchFilter span{
+    padding: 0 30px 0 20px;
+}
 
+.blocFilter:hover{
+    color: #0065FC;
+    background-color: #F2F2F2;
+    transform: scale(1.03);
+}
+
+/* ------------------------------ INFORMATION ------------------------------ */
+.information{
+    display: flex;
+    align-items: center;
+}
+
+.information .fa-solid{
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    color: #0065FC;
+    width: 30px;
+    height: 30px;
+    border: 2px solid #F2F2F2;
+    border-radius: 50%;
+}
+
+.information p{
+    margin-left: 15px;
+    font-size: 14pt;
+}
+
+/* ------------------------------ HOTEL ------------------------------ */
+
+/* ------------------------------ POPULAIRE ------------------------------ */
+
+/* ------------------------------ ACTIVITE ------------------------------ */
 .bloc_activite {
     height: 500px;
     width: auto;
@@ -127,8 +206,7 @@ header {
     float: left;
 }
 
-/* ------------------------------FOOTER------------------------------ */
-
+/* ------------------------------ FOOTER ------------------------------ */
 footer {
     display: flex;
     padding: 20px 30px;
@@ -147,4 +225,73 @@ footer li {
 footer a:hover {
     font-weight: 500;
     color: #0065FC;
+}
+
+/* ________________________________________ MEDIA QUERIES ________________________________________ */
+
+/* ++++++++++++++++++++++++++++++ TABLETTE ++++++++++++++++++++++++++++++ */
+@media (max-width: 992px){
+    body{
+        border: 3px solid pink;
+    }
+
+/* ------------------------------ SEARCH BAR TITLE ------------------------------ */
+    .searchTitle{
+        margin-bottom: 30px;
+    }
+
+    /* ------------------------------ SEARCH BAR ------------------------------ */
+    .searchBar input{
+        flex-basis: 100%;
+    }
+
+    .searchBarText{
+        display: none;
+    }
+
+    .searchBar button {
+        padding: 0px 12px;
+        background-color: #0065FC;
+        color: white;
+        border-radius: 12px;
+        border: 0;
+        cursor: pointer;
+        opacity: 1;
+        transition: transform 100ms;
+    }
+
+    .fa-solid.fa-magnifying-glass{
+        display: inherit;
+        background-color: inherit;
+    }
+}
+
+/* ++++++++++++++++++++++++++++++ MOBILE ++++++++++++++++++++++++++++++ */
+@media (max-width: 767px){
+    body{
+        border: 5px solid purple;
+    }
+
+/* ------------------------------ HEADER ------------------------------ */
+    .logoBooki{
+        margin: auto;
+    }
+
+    .blocNav{
+        flex-basis: 100%;
+        margin-bottom: 10px;
+    }
+
+    .blocNav a{
+        padding: 15px;
+        flex-basis: 50%;
+        border-bottom: 3px solid #F2F2F2;
+        text-align: center;
+        font-size: 16pt;
+    }
+
+    .blocNav a:hover{
+        border-top-color: transparent;
+        border-bottom-color:#0065FC;
+    }
 }
