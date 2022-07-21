@@ -1,8 +1,23 @@
-/* GENERAL */
+/* ------------------------------GENERAL------------------------------ */
 
 body {
     font-family: 'Raleway', sans-serif;
-    margin: 0 50px 50px 50px;
+    padding: 0 20px;
+}
+
+h1 {
+    font-weight: 700;
+    font-size: x-large;
+}
+
+h2 {
+    font-weight: 600;
+    font-size: larger;
+}
+
+h3 {
+    font-weight: 500;
+    font-size: large;
 }
 
 a {
@@ -10,29 +25,18 @@ a {
     color: initial;
 }
 
-ul {
-    list-style-type: none;
-    padding: 0;
-    margin: 0;
-}
 
-/* HEADER */
-
+/* ------------------------------HEADER------------------------------ */
 header {
     display: flex;
-    margin: auto;
     justify-content: space-between;
-}
-
-#bloc_logobooki {
-    display: flex;
-    padding: 0;
 }
 
 .bloc_nav {
     display: flex;
     justify-content: center;
     align-items: center;
+    font-weight: 500;
 }
 
 .bloc_nav a {
@@ -42,18 +46,74 @@ header {
 .bloc_nav a:hover {
     color: #0065FC;
     border-top: 4px solid #0065FC;
-    padding-top: 33px;
+    padding-top: 25px;
 }
 
-/* SEARCH BAR */
+/* ------------------------------SEARCH BAR TITLE------------------------------ */
+.searchTitle h1 {
+    margin-bottom: 10px;
+}
 
-/* FILTER */
+.searchTitle p {
+    margin-bottom: 15px;
+}
 
-/* HOTEL */
 
-/* POPULAIRE */
+/* ------------------------------SEARCH BAR------------------------------ */
+.searchBar {
+    display: flex;
+    margin-bottom: 30px;
+}
 
-/* ACTIVITE */
+.searchBar i {
+    padding: 10px 12px;
+    background-color: #F2F2F2;
+    border-radius: 12px 0px 0px 12px;
+}
+
+.searchBar input {
+    width: 250px;
+    border: 1px solid #F2F2F2;
+    font-size: medium;
+    padding: 0 12px;
+}
+
+.searchBar input::placeholder {
+    font-weight: 500;
+}
+
+.searchBar button {
+    padding: 0px 12px;
+    background-color: #0065FC;
+    color: white;
+    font-size: medium;
+    font-weight: 500;
+    border-radius: 0 12px 12px 0;
+    border: 0;
+    cursor: pointer;
+}
+
+.searchBar button:hover {
+    background-color: #DEEBFF;
+    color: #0065FC;
+
+}
+
+.searchBar button:active {
+    background-color: #0065FC;
+    color: white;
+}
+
+/* ------------------------------FILTER------------------------------ */
+.searchFilter {
+    display: flex;
+}
+
+/* ------------------------------HOTEL------------------------------ */
+
+/* ------------------------------POPULAIRE------------------------------ */
+
+/* ------------------------------ACTIVITE------------------------------ */
 
 .bloc_activite {
     height: 500px;
@@ -63,11 +123,11 @@ header {
     justify-content: space-between;
 }
 
-.bloc_activite div{
+.bloc_activite div {
     float: left;
 }
 
-/* FOOTER */
+/* ------------------------------FOOTER------------------------------ */
 
 footer {
     display: flex;

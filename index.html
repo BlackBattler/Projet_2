@@ -11,7 +11,11 @@
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
     <link href="https://fonts.googleapis.com/css2?family=Raleway:wght@400;500;600;700&display=swap" rel="stylesheet">
 
+    <!-- Kits -->
+    <script src="https://kit.fontawesome.com/9092a6acfc.js" crossorigin="anonymous"></script>
+
     <!-- Stylesheet -->
+    <link rel="stylesheet" href="css/reset.css" />
     <link rel="stylesheet" href="css/style.css" />
 </head>
 
@@ -19,19 +23,19 @@
     <div>
         <!-- Section Header -->
         <header>
+            <!-- Logo -->
             <div id="bloc_logobooki">
                 <a href="index.html" id="logo"><img src="images/logo/Booki.png" alt="logo" /></a>
             </div>
 
+            <!-- Navigation -->
             <nav class="bloc_nav">
                 <div>
                     <a href=#section_hebergement>Hébergements</a>
                 </div>
-
                 <div>
                     <a href=#section_activite>Activités</a>
                 </div>
-
             </nav>
         </header>
 
@@ -40,30 +44,49 @@
 
             <!-- Section Recherche -->
             <section>
-                <div>
+
+                <!-- Titre Recherche -->
+                <div class="searchTitle">
                     <h1>Trouvez votre hébergement pour des vacances de rêve</h1>
                     <p>En plein centre ville ou en pleine nature</p>
                 </div>
 
-                <div>
-                    <p>
-                        <input type="search" placeholder="Marseille, France" class="search_bar" />
-                        <button type="button">Rechercher</button>
-                    </p>
+                <!-- Section Recherche Bar -->
+                <div class="searchBar">
+                    <i class="fa-solid fa-location-dot"></i>
+                    <input type="search" placeholder="Marseille, France" class="search_bar" />
+                    <button type="button">Rechercher</button>
                 </div>
 
-                <div>
+                <!-- Filtres -->
+                <div class="searchFilter">
                     <h3>Filtres</h3>
                     <ul>
-                        <li><button type="button">Économique</button></li>
-                        <li><button type="button">Familial</button></li>
-                        <li><button type="button">Romantique</button></li>
-                        <li><button type="button">Animaux autorisés</button></li>
+                        <li>
+                            <i class="fa-solid fa-money-bill-wave"></i>
+                            <button type="button">Économique</button>
+                        </li>
+                        <li>
+
+                            <button type="button">Familial</button>
+                        </li>
+                        <li>
+                            <i class="fa-solid fa-heart"></i>
+                            <button type="button">Romantique</button>
+                        </li>
+                        <li>
+                            <i class="fa-solid fa-dog"></i>
+                            <button type="button">Animaux autorisés</button>
+                        </li>
                     </ul>
                 </div>
 
-                <div>
-                    <p>Plus de 500 logements sont disponibles dans cette ville</p>
+                <!-- Informations -->
+                <div>                   
+                    <p>
+                        <i class="fa-solid fa-info">
+                        </i>Plus de 500 logements sont disponibles dans cette ville
+                    </p>
                 </div>
             </section>
 
