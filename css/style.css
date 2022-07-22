@@ -1,301 +1,367 @@
 /* ------------------------------ FONT ------------------------------ */
-@import url('https://fonts.googleapis.com/css2?family=Raleway:wght@300;400;500;600;700;800;900&display=swap');
-
+@import url("https://fonts.googleapis.com/css2?family=Raleway:wght@300;400;500;600;700;800;900&display=swap");
 
 /* ------------------------------ VARIABLES ------------------------------ */
-:root{
-    --colorBlue : #0065FC;
-    --colorLightBlue : #DEEBFF;
-    --colorGrey : #F2F2F2;
+:root {
+  --colorBlue: #0065fc;
+  --colorLightBlue: #deebff;
+  --colorGrey: #f2f2f2;
 }
 
 /* ------------------------------ GENERAL ------------------------------ */
-*{
-    box-sizing: border-box;
-    font-family: "Raleway", "sans-serif";
+* {
+  box-sizing: border-box;
+  font-family: "Raleway", "sans-serif";
 }
 
 h1 {
-    font-weight: 700;
-    font-size: x-large;
+  font-weight: 700;
+  font-size: x-large;
 }
 
 h2 {
-    font-weight: 600;
-    font-size: larger;
+  font-weight: 600;
+  font-size: larger;
 }
 
 h3 {
-    font-weight: 500;
-    font-size: large;
+  font-weight: 500;
+  font-size: large;
 }
 
 a {
-    text-decoration: none;
-    color: inherit;
-    font-weight: 500;
+  text-decoration: none;
+  color: inherit;
+  font-weight: 500;
 }
 
 /* ------------------------------ HEADER ------------------------------ */
 .headerNav {
-    display: flex;
-    align-items: center;
-    justify-content: flex-end;
-    flex-wrap: wrap;
-    margin-bottom: 20px;
+  display: flex;
+  align-items: center;
+  justify-content: flex-end;
+  flex-wrap: wrap;
+  margin-bottom: 20px;
 }
 
-.logoBooki{
-    padding-left: 25px;
-    margin-right: auto;
+.logoBooki {
+  padding-left: 25px;
+  margin-right: auto;
 }
 
-.blocNav{
-    display: flex;
+.blocNav {
+  display: flex;
 }
 
-.blocNav a{
-    padding: 25px;
-    border-top: 3px solid transparent;
-    font-size: 14pt;
+.blocNav a {
+  padding: 25px;
+  border-top: 3px solid transparent;
+  font-size: 14pt;
 }
 
-.blocNav a:hover{
-    border-top-color: var(--colorBlue);
-    color: var(--colorBlue);
+.blocNav a:hover {
+  border-top-color: var(--colorBlue);
+  color: var(--colorBlue);
 }
 
-#sectionRecherche{
-    padding: 0 25px;
-    margin-bottom: 20px;
-}
 /* ------------------------------ SEARCH BAR TITLE ------------------------------ */
+#sectionRecherche {
+  padding: 0 25px;
+  margin-bottom: 20px;
+}
+
 .searchTitle h1 {
-    margin-bottom: 10px;
+  margin-bottom: 10px;
 }
 
 .searchTitle p {
-    margin-bottom: 15px;
+  margin-bottom: 15px;
 }
-
 
 /* ------------------------------ SEARCH BAR ------------------------------ */
 .searchBar {
-    display: flex;
-    margin-bottom: 30px;
+  display: flex;
+  margin-bottom: 30px;
 }
 
 .searchBar i {
-    padding: 15px 15px;
-    background-color: var(--colorGrey);
-    border-radius: 12px 0px 0px 12px;
+  padding: 15px 15px;
+  background-color: var(--colorGrey);
+  border-radius: 12px 0px 0px 12px;
 }
 
 .searchBar input {
-    flex-basis: 250px;
-    border: 1px solid var(--colorGrey);
-    font-size: 16pt;
-    padding: 0 12px;
-    overflow: auto;
+  flex-basis: 250px;
+  border: 1px solid var(--colorGrey);
+  font-size: 16pt;
+  padding: 0 12px;
+  overflow: auto;
 }
 
 .searchBar input::placeholder {
-    font-weight: 500;
+  font-weight: 500;
 }
 
 .searchBar button {
-    padding: 0px 12px;
-    background-color: var(--colorBlue);
-    color: white;
-    font-size: medium;
-    font-weight: 500;
-    border-radius: 0 12px 12px 0;
-    border: 0;
-    cursor: pointer;
-    opacity: 1;
-    transition: transform 100ms;
+  padding: 0px 12px;
+  background-color: var(--colorBlue);
+  color: white;
+  font-size: medium;
+  font-weight: 500;
+  border-radius: 0 12px 12px 0;
+  border: 0;
+  cursor: pointer;
+  opacity: 1;
+  transition: transform 100ms;
 }
 
 .searchBar button:hover {
-    opacity: 0.9;
-    transform: scale(1.01)
+  opacity: 0.9;
+  transform: scale(1.01);
 }
 
 .searchBar button:active {
-    transform: scale(1);
+  transform: scale(1);
 }
 
-.fa-solid.fa-magnifying-glass{
-    display: none;
+.fa-solid.fa-magnifying-glass {
+  display: none;
 }
 
 /* ------------------------------ FILTER ------------------------------ */
 .searchFilter {
-    display: flex;
-    flex-wrap: wrap;
-    align-items: center;
-    margin-bottom: 40px;
-    font-weight: 700;
-    font-size: 14pt;
-    gap: 25px;
+  display: flex;
+  flex-wrap: wrap;
+  align-items: center;
+  margin-bottom: 40px;
+  font-weight: 700;
+  font-size: 14pt;
+  gap: 25px;
 }
 
-.blocFilter{
-    display: flex;
-    align-items: center;
-    border: 3px solid var(--colorGrey);
-    border-radius: 50px;
-    cursor: pointer;
+.blocFilter {
+  display: flex;
+  align-items: center;
+  border: 3px solid var(--colorGrey);
+  border-radius: 50px;
+  cursor: pointer;
 }
 
-.searchFilter .fa-solid{
-    display: flex;
-    color: var(--colorBlue);
-    font-size: 25px;
-    background-color: var(--colorLightBlue);
-    border-radius: 50%;
-    margin: -3px;
-    width: 50px;
-    height: 50px;
-    align-items: center;
-    justify-content: center;
+.searchFilter .fa-solid {
+  display: flex;
+  color: var(--colorBlue);
+  font-size: 25px;
+  background-color: var(--colorLightBlue);
+  border-radius: 50%;
+  margin: -3px;
+  width: 50px;
+  height: 50px;
+  align-items: center;
+  justify-content: center;
 }
 
-.searchFilter span{
-    padding: 0 30px 0 20px;
+.searchFilter span {
+  padding: 0 30px 0 20px;
 }
 
-.blocFilter:hover{
-    color: var(--colorBlue);
-    background-color: var(--colorGrey);
-    transform: scale(1.03);
+.blocFilter:hover {
+  color: var(--colorBlue);
+  background-color: var(--colorGrey);
+  transform: scale(1.03);
 }
 
 /* ------------------------------ INFORMATION ------------------------------ */
-.information{
-    display: flex;
-    align-items: center;
+.information {
+  display: flex;
+  align-items: center;
 }
 
-.information .fa-solid{
-    display: flex;
-    align-items: center;
-    justify-content: center;
-    color: var(--colorBlue);
-    width: 30px;
-    height: 30px;
-    border: 2px solid var(--colorGrey);
-    border-radius: 50%;
+.information .fa-solid {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  color: var(--colorBlue);
+  padding: 7px 12px;
+  border: 2px solid var(--colorGrey);
+  border-radius: 50%;
 }
 
-.information p{
-    margin-left: 15px;
-    font-size: 14pt;
+.information p {
+  margin-left: 15px;
+  font-size: 14pt;
 }
 
-/* ------------------------------ HOTEL ------------------------------ */
+/* ------------------------------ SECTION HEBERGEMENTS ------------------------------ */
+.sectionHebergement {
+  padding: 0 25px;
+  display: flex;
+  gap: 25px;
+}
 
-/* ------------------------------ POPULAIRE ------------------------------ */
+.sectionHebergement > div{
+    padding: 25px;
+    border-radius: 15px;
+}
 
-/* ------------------------------ ACTIVITE ------------------------------ */
-.bloc_activite {
-    height: 500px;
-    width: auto;
+.sectionHebergement h2{
+    margin-bottom: 25px;
+}
+
+.blocHebergement {
+  flex-basis: 66%;
+  background-color: var(--colorGrey);
+}
+
+.blocHebergement a{
+    font-weight: 700;
+}
+
+.blocHebergementListe {
+    border: 1px solid black;
     display: flex;
-    flex-flow: column wrap;
     justify-content: space-between;
+    flex-wrap: wrap;
+    gap: 15px;
+    margin-bottom: 25px;
+}
+
+.frameHebergement{
+    border: 1px solid red;
+    background-color: white;
+    border-radius: 15px;
+    flex-basis: calc(33%-15px);
+}
+
+.starBlue{
+    color: var(--colorBlue);
+}
+
+.starGrey{
+    color: var(--colorGrey);
+}
+
+/* ------------------------------ SECTION POPULAIRE ------------------------------ */
+.blocPopulaire {
+  flex-basis: 33%;
+  background-color: var(--colorGrey);
+}
+
+.blocPopulaireListe{
+    border: 1px solid black;
+    display: flex;
+    flex-direction: column;
+    gap: 15px;
+}
+
+.framePopulaire{
+    border: 1px solid red;
+    background-color: white;
+    border-radius: 15px;
+}
+
+/* ------------------------------ SECTION ACTIVITE ------------------------------ */
+.bloc_activite {
+  height: 500px;
+  width: auto;
+  display: flex;
+  flex-flow: column wrap;
+  justify-content: space-between;
 }
 
 .bloc_activite div {
-    float: left;
+  float: left;
 }
 
 /* ------------------------------ FOOTER ------------------------------ */
 footer {
-    display: flex;
-    padding: 20px 30px;
-    margin-top: 40px;
-    background-color: var(--colorGrey);
+  display: flex;
+  padding: 20px 30px;
+  margin-top: 40px;
+  background-color: var(--colorGrey);
 }
 
 footer div {
-    flex: 1;
+  flex: 1;
 }
 
 footer li {
-    margin-bottom: 5px;
+  margin-bottom: 5px;
 }
 
 footer a:hover {
-    font-weight: 500;
-    color: var(--colorBlue);
+  font-weight: 500;
+  color: var(--colorBlue);
 }
 
 /* ________________________________________ MEDIA QUERIES ________________________________________ */
 
 /* ++++++++++++++++++++++++++++++ TABLETTE ++++++++++++++++++++++++++++++ */
-@media (max-width: 992px){
-    body{
-        border: 3px solid pink;
-    }
+@media (max-width: 992px) {
+  body {
+    border: 5px solid green;
+  }
 
-/* ------------------------------ SEARCH BAR TITLE ------------------------------ */
-    .searchTitle{
-        margin-bottom: 30px;
-    }
+  /* ------------------------------ SEARCH BAR TITLE ------------------------------ */
+  .searchTitle {
+    margin-bottom: 30px;
+  }
 
-    /* ------------------------------ SEARCH BAR ------------------------------ */
-    .searchBar input{
-        flex-basis: 100%;
-    }
+  /* ------------------------------ SEARCH BAR ------------------------------ */
+  .searchBar input {
+    flex-basis: 100%;
+  }
 
-    .searchBarText{
-        display: none;
-    }
+  .searchBarText {
+    display: none;
+  }
 
-    .searchBar button {
-        padding: 0px 12px;
-        background-color: var(--colorBlue);
-        color: white;
-        border-radius: 12px;
-        border: 0;
-        cursor: pointer;
-        opacity: 1;
-        transition: transform 100ms;
-    }
+  .searchBar button {
+    padding: 0px 12px;
+    background-color: var(--colorBlue);
+    color: white;
+    border-radius: 12px;
+    border: 0;
+    cursor: pointer;
+    opacity: 1;
+    transition: transform 100ms;
+  }
 
-    .fa-solid.fa-magnifying-glass{
-        display: inherit;
-        background-color: inherit;
-    }
+  .fa-solid.fa-magnifying-glass {
+    display: inherit;
+    background-color: inherit;
+  }
+
+  .sectionHebergement{
+    flex-direction: column-reverse;
+  }
 }
 
 /* ++++++++++++++++++++++++++++++ MOBILE ++++++++++++++++++++++++++++++ */
-@media (max-width: 767px){
-    body{
-        border: 5px solid purple;
-    }
+@media (max-width: 767px) {
+  body {
+    border: 5px solid red;
+  }
 
-/* ------------------------------ HEADER ------------------------------ */
-    .logoBooki{
-        margin: auto;
-    }
+  /* ------------------------------ HEADER ------------------------------ */
+  .logoBooki {
+    margin: auto;
+  }
 
-    .blocNav{
-        flex-basis: 100%;
-        margin-bottom: 10px;
-    }
+  .blocNav {
+    flex-basis: 100%;
+    margin-bottom: 10px;
+  }
 
-    .blocNav a{
-        padding: 15px;
-        flex-basis: 50%;
-        border-bottom: 3px solid var(--colorGrey);
-        text-align: center;
-        font-size: 16pt;
-    }
+  .blocNav a {
+    padding: 15px;
+    flex-basis: 50%;
+    border-bottom: 3px solid var(--colorGrey);
+    text-align: center;
+    font-size: 16pt;
+  }
 
-    .blocNav a:hover{
-        border-top-color: transparent;
-        border-bottom-color: var(--colorBlue);
-    }
+  .blocNav a:hover {
+    border-top-color: transparent;
+    border-bottom-color: var(--colorBlue);
+  }
 }
