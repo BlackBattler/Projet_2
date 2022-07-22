@@ -14,28 +14,29 @@
   font-family: "Raleway", "sans-serif";
 }
 
-h1 {
-  font-weight: 700;
-  font-size: x-large;
-}
-
-h2 {
-  font-weight: 600;
-  font-size: larger;
-}
-
-h3 {
-  font-weight: 500;
-  font-size: large;
-}
-
 a {
   text-decoration: none;
   color: inherit;
   font-weight: 500;
 }
 
-/* ------------------------------ HEADER ------------------------------ */
+strong {
+  font-weight: 600;
+}
+
+.starBlue {
+  color: var(--colorBlue);
+}
+
+.starGrey {
+  color: var(--colorGrey);
+}
+
+/* ------------------------------ SECTION HEADER ------------------------------ */
+header {
+  padding: 0 70px;
+}
+
 .headerNav {
   display: flex;
   align-items: center;
@@ -57,20 +58,24 @@ a {
   padding: 25px;
   border-top: 3px solid transparent;
   font-size: 14pt;
+  transition: transform 150ms;
 }
 
 .blocNav a:hover {
   border-top-color: var(--colorBlue);
   color: var(--colorBlue);
+  transform: scale(1.03);
 }
 
 /* ------------------------------ SEARCH BAR TITLE ------------------------------ */
-#sectionRecherche {
-  padding: 0 25px;
+.sectionRecherche {
+  padding: 0 70px;
   margin-bottom: 20px;
 }
 
 .searchTitle h1 {
+  font-size: 24pt;
+  font-weight: 700;
   margin-bottom: 10px;
 }
 
@@ -112,7 +117,7 @@ a {
   border: 0;
   cursor: pointer;
   opacity: 1;
-  transition: transform 100ms;
+  transition: transform 150ms;
 }
 
 .searchBar button:hover {
@@ -193,18 +198,20 @@ a {
 
 /* ------------------------------ SECTION HEBERGEMENTS ------------------------------ */
 .sectionHebergement {
-  padding: 0 25px;
+  padding: 0 70px;
   display: flex;
-  gap: 25px;
+  gap: 50px;
 }
 
-.sectionHebergement > div{
-    padding: 25px;
-    border-radius: 15px;
+.sectionHebergement>div {
+  padding: 50px;
+  border-radius: 25px;
 }
 
-.sectionHebergement h2{
-    margin-bottom: 25px;
+.sectionHebergement h2 {
+  font-size: 20pt;
+  font-weight: 700;
+  margin-bottom: 25px;
 }
 
 .blocHebergement {
@@ -212,51 +219,99 @@ a {
   background-color: var(--colorGrey);
 }
 
-.blocHebergement a{
-    font-weight: 700;
+.blocHebergement a {
+  font-weight: 700;
 }
 
 .blocHebergementListe {
-    border: 1px solid black;
-    display: flex;
-    justify-content: space-between;
-    flex-wrap: wrap;
-    gap: 15px;
-    margin-bottom: 25px;
+  display: flex;
+  justify-content: space-around;
+  flex-flow: column wrap;
+  margin-bottom: 25px;
+  gap: 25px;
 }
 
-.frameHebergement{
-    border: 1px solid red;
-    background-color: white;
-    border-radius: 15px;
-    flex-basis: calc(33%-15px);
+.hebergementRow {
+  display: flex;
+  flex-basis: 33%;
+  gap: 40px;
 }
 
-.starBlue{
-    color: var(--colorBlue);
+.frameHebergement {
+  background-color: white;
+  border-radius: 15px;
+  padding: 5px;
+  box-shadow: 0 0 15px rgba(0, 0, 0, 0.2);
+  cursor: pointer;
 }
 
-.starGrey{
-    color: var(--colorGrey);
+.frameHebergement img {
+  border-radius: 15px 15px 0 0;
+  height: 210px;
+  width: 100%;
+  object-fit: cover;
+  margin-bottom: 5px;
 }
+
+.frameHebergement h3 {
+  font-size: 14pt;
+  font-weight: 700;
+}
+
+.frameHebergement h3,
+.frameHebergement p {
+  margin: 0 0 5px 10px;
+}
+
+.frameHebergement:hover {
+  transform: scale(1.03);
+}
+
 
 /* ------------------------------ SECTION POPULAIRE ------------------------------ */
 .blocPopulaire {
+  display: flex;
   flex-basis: 33%;
   background-color: var(--colorGrey);
+  flex-direction: column;
 }
 
-.blocPopulaireListe{
-    border: 1px solid black;
-    display: flex;
-    flex-direction: column;
-    gap: 15px;
+.blocPopulaire h2{
+  display: flex;
+  justify-content: space-between;
 }
 
-.framePopulaire{
-    border: 1px solid red;
-    background-color: white;
-    border-radius: 15px;
+.blocPopulaireListe {
+  display: flex;
+  flex-direction: column;
+  gap: 15px;
+}
+
+.framePopulaire {
+  display: flex;
+  background-color: white;
+  border-radius: 15px;
+  padding: 5px;
+  box-shadow: 0 0 15px rgba(0, 0, 0, 0.2);
+}
+
+.framePopulaire img{
+  border-radius: 15px 0 0 15px;
+  width: 160px;
+}
+
+.framePopulaire h3 {
+  font-size: 14pt;
+  font-weight: 700;
+}
+
+.framePopulaire h3,
+.framePopulaire p {
+  margin: 0 0 5px 10px;
+}
+
+.framePopulaire:hover {
+  transform: scale(1.03);
 }
 
 /* ------------------------------ SECTION ACTIVITE ------------------------------ */
@@ -301,12 +356,21 @@ footer a:hover {
     border: 5px solid green;
   }
 
+  /* ------------------------------ SECTION HEADER ------------------------------ */
+  header {
+    padding: 0 25px;
+  }
+
   /* ------------------------------ SEARCH BAR TITLE ------------------------------ */
   .searchTitle {
     margin-bottom: 30px;
   }
 
   /* ------------------------------ SEARCH BAR ------------------------------ */
+  .sectionRecherche {
+    padding: 0 25px;
+  }
+
   .searchBar input {
     flex-basis: 100%;
   }
@@ -331,9 +395,24 @@ footer a:hover {
     background-color: inherit;
   }
 
-  .sectionHebergement{
+  .sectionHebergement {
     flex-direction: column-reverse;
   }
+
+  /* ------------------------------ SECTION HEBERGEMENT ------------------------------ */
+  .sectionHebergement {
+    padding: 0;
+  }
+
+  .sectionHebergement>div {
+    padding: 25px;
+    border-radius: 0;
+  }
+
+  .blocHebergement {
+    background-color: inherit;
+  }
+
 }
 
 /* ++++++++++++++++++++++++++++++ MOBILE ++++++++++++++++++++++++++++++ */
