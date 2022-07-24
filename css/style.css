@@ -1,14 +1,14 @@
-/* ------------------------------ FONT ------------------------------ */
+/* ++++++++++++++++++++++++++++++ FONT ++++++++++++++++++++++++++++++ */
 @import url("https://fonts.googleapis.com/css2?family=Raleway:wght@300;400;500;600;700;800;900&display=swap");
 
-/* ------------------------------ VARIABLES ------------------------------ */
+/* ++++++++++++++++++++++++++++++ VARIABLES ++++++++++++++++++++++++++++++ */
 :root {
   --colorBlue: #0065fc;
   --colorLightBlue: #deebff;
   --colorGrey: #f2f2f2;
 }
 
-/* ------------------------------ GENERAL ------------------------------ */
+/* ++++++++++++++++++++++++++++++ GENERAL ++++++++++++++++++++++++++++++ */
 * {
   box-sizing: border-box;
   font-family: "Raleway", "sans-serif";
@@ -21,7 +21,7 @@ a {
 }
 
 strong {
-  font-weight: 600;
+  font-weight: 700;
 }
 
 .starBlue {
@@ -32,7 +32,7 @@ strong {
   color: var(--colorGrey);
 }
 
-/* ------------------------------ SECTION HEADER ------------------------------ */
+/* ++++++++++++++++++++++++++++++ SECTION HEADER ++++++++++++++++++++++++++++++ */
 header {
   padding: 0 70px;
 }
@@ -67,12 +67,13 @@ header {
   transform: scale(1.03);
 }
 
-/* ------------------------------ SEARCH BAR TITLE ------------------------------ */
+/* ++++++++++++++++++++++++++++++ SECTION RECHERCHE ++++++++++++++++++++++++++++++ */
 .sectionRecherche {
   padding: 0 70px;
   margin-bottom: 20px;
 }
 
+/* -------------------- SEARCH BAR TITLE -------------------- */
 .searchTitle h1 {
   font-size: 24pt;
   font-weight: 700;
@@ -83,7 +84,7 @@ header {
   margin-bottom: 15px;
 }
 
-/* ------------------------------ SEARCH BAR ------------------------------ */
+/* -------------------- SEARCH BAR -------------------- */
 .searchBar {
   display: flex;
   margin-bottom: 30px;
@@ -133,7 +134,7 @@ header {
   display: none;
 }
 
-/* ------------------------------ FILTER ------------------------------ */
+/* -------------------- FILTER -------------------- */
 .searchFilter {
   display: flex;
   flex-wrap: wrap;
@@ -175,7 +176,7 @@ header {
   transform: scale(1.03);
 }
 
-/* ------------------------------ INFORMATION ------------------------------ */
+/* -------------------- INFORMATION -------------------- */
 .information {
   display: flex;
   align-items: center;
@@ -196,16 +197,12 @@ header {
   font-size: 14pt;
 }
 
-/* ------------------------------ SECTION HEBERGEMENTS ------------------------------ */
+/* ++++++++++++++++++++++++++++++ SECTION HEBERGEMENTS ++++++++++++++++++++++++++++++ */
 .sectionHebergement {
   padding: 0 70px;
+  margin-bottom: 20px;
   display: flex;
-  gap: 50px;
-}
-
-.sectionHebergement>div {
-  padding: 50px;
-  border-radius: 25px;
+  gap: 30px;
 }
 
 .sectionHebergement h2 {
@@ -214,69 +211,84 @@ header {
   margin-bottom: 25px;
 }
 
-.blocHebergement {
-  flex-basis: 66%;
-  background-color: var(--colorGrey);
+.sectionHebergement h3 {
+  font-size: 14pt;
+  font-weight: 700;
 }
 
-.blocHebergement a {
-  font-weight: 700;
+/* -------------------- HEBERGEMENT -------------------- */
+.blocHebergement {
+  background-color: var(--colorGrey);
+  flex-basis: 66%;
+  border-radius: 15px;
+  padding: 25px 25px;
 }
 
 .blocHebergementListe {
   display: flex;
-  justify-content: space-around;
-  flex-flow: column wrap;
+  flex-direction: column;
   margin-bottom: 25px;
-  gap: 25px;
+  gap: 20px;
 }
 
-.hebergementRow {
+.blocHebergementListe .container {
   display: flex;
-  flex-basis: 33%;
-  gap: 40px;
+  gap: 20px;
+}
+
+.blocHebergementListe a {
+  display: inline-flex;
+  flex-direction: column;
+  justify-content: space-between;
 }
 
 .frameHebergement {
   background-color: white;
   border-radius: 15px;
-  padding: 5px;
+  flex-basis: 31%;
+  height: 220px;
+  justify-content: flex-end;
   box-shadow: 0 0 15px rgba(0, 0, 0, 0.2);
-  cursor: pointer;
 }
 
 .frameHebergement img {
+  height: 65%;
+  padding: 3px;
   border-radius: 15px 15px 0 0;
-  height: 210px;
-  width: 100%;
   object-fit: cover;
-  margin-bottom: 5px;
-}
-
-.frameHebergement h3 {
-  font-size: 14pt;
-  font-weight: 700;
-}
-
-.frameHebergement h3,
-.frameHebergement p {
-  margin: 0 0 5px 10px;
+  object-position: center;
+  min-width: 260px;
 }
 
 .frameHebergement:hover {
   transform: scale(1.03);
 }
 
-
-/* ------------------------------ SECTION POPULAIRE ------------------------------ */
-.blocPopulaire {
+.descriptionHebergement {
   display: flex;
-  flex-basis: 33%;
-  background-color: var(--colorGrey);
   flex-direction: column;
+  justify-content: space-between;
+  padding: 5px 0 5px 10px;
+  flex-basis: 35%;
 }
 
-.blocPopulaire h2{
+.ratingHebergement .fa-solid {
+  font-size: 12px;
+}
+
+.showMore {
+  font-weight: 700;
+}
+
+/* -------------------- SECTION POPULAIRE -------------------- */
+.blocPopulaire {
+  background-color: var(--colorGrey);
+  flex-basis: 33%;
+  border-radius: 15px;
+  padding: 25px 25px;
+}
+
+.blocPopulaire h2 {
   display: flex;
   justify-content: space-between;
 }
@@ -284,50 +296,59 @@ header {
 .blocPopulaireListe {
   display: flex;
   flex-direction: column;
-  gap: 15px;
+  gap: 25px;
+}
+
+.blocPopulaireListe a {
+  display: inline-flex;
 }
 
 .framePopulaire {
   display: flex;
+  justify-content: space-between;
   background-color: white;
   border-radius: 15px;
-  padding: 5px;
+  height: 160px;
   box-shadow: 0 0 15px rgba(0, 0, 0, 0.2);
 }
 
-.framePopulaire img{
+.framePopulaire img {
+  width: 40%;
+  padding: 3px;
   border-radius: 15px 0 0 15px;
-  width: 160px;
-}
-
-.framePopulaire h3 {
-  font-size: 14pt;
-  font-weight: 700;
-}
-
-.framePopulaire h3,
-.framePopulaire p {
-  margin: 0 0 5px 10px;
+  object-fit: cover;
+  min-width: 160px;
 }
 
 .framePopulaire:hover {
   transform: scale(1.03);
 }
 
-/* ------------------------------ SECTION ACTIVITE ------------------------------ */
-.bloc_activite {
-  height: 500px;
-  width: auto;
+.descriptionPopulaire {
   display: flex;
-  flex-flow: column wrap;
+  flex-direction: column;
+  flex-basis: 60%;
+  padding: 10px 25px 5px 10px;
   justify-content: space-between;
+  min-width: 250px;
 }
 
-.bloc_activite div {
-  float: left;
+.descriptionPopulaire h3,
+.descriptionPopulaire p {
+  margin-bottom: 10px;
 }
 
-/* ------------------------------ FOOTER ------------------------------ */
+.ratingPopulaire .fa-solid {
+  font-size: 12px;
+}
+
+.populaire3 {
+  object-position: inherit;
+}
+
+/* ++++++++++++++++++++++++++++++ SECTION ACTIVITE ++++++++++++++++++++++++++++++ */
+
+/* ++++++++++++++++++++++++++++++ SECTION FOOTER ++++++++++++++++++++++++++++++ */
 footer {
   display: flex;
   padding: 20px 30px;
@@ -395,12 +416,10 @@ footer a:hover {
     background-color: inherit;
   }
 
-  .sectionHebergement {
-    flex-direction: column-reverse;
-  }
 
   /* ------------------------------ SECTION HEBERGEMENT ------------------------------ */
   .sectionHebergement {
+    flex-direction: column-reverse;
     padding: 0;
   }
 
@@ -411,6 +430,7 @@ footer a:hover {
 
   .blocHebergement {
     background-color: inherit;
+    min-width: none;
   }
 
 }
