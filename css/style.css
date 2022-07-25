@@ -32,10 +32,37 @@ strong {
   color: var(--colorGrey);
 }
 
-/* ++++++++++++++++++++++++++++++ SECTION HEADER ++++++++++++++++++++++++++++++ */
-header {
-  padding: 0 70px;
+header{
+  padding: 0 50px;
 }
+
+main{
+  padding: 0 50px;
+}
+
+/* ++++++++++++++++++++++++++++++ EFFECTS ++++++++++++++++++++++++++++++ */
+.shadowEffect{
+  box-shadow: 0 0 15px rgba(0, 0, 0, 0.2);
+}
+
+.hoverFilterEffect:hover{
+  color: var(--colorBlue);
+  background-color: var(--colorGrey);
+  transform: scale(1.03);
+}
+
+.hoverCardEffect:hover{
+  transform: scale(1.01);
+}
+
+.imagePositionCenter{
+  object-position: center;
+}
+
+.imagePositionTop{
+  object-position: top;
+}
+/* ++++++++++++++++++++++++++++++ SECTION HEADER ++++++++++++++++++++++++++++++ */
 
 .headerNav {
   display: flex;
@@ -69,7 +96,6 @@ header {
 
 /* ++++++++++++++++++++++++++++++ SECTION RECHERCHE ++++++++++++++++++++++++++++++ */
 .sectionRecherche {
-  padding: 0 70px;
   margin-bottom: 20px;
 }
 
@@ -170,12 +196,6 @@ header {
   padding: 0 30px 0 20px;
 }
 
-.blocFilter:hover {
-  color: var(--colorBlue);
-  background-color: var(--colorGrey);
-  transform: scale(1.03);
-}
-
 /* -------------------- INFORMATION -------------------- */
 .information {
   display: flex;
@@ -199,14 +219,13 @@ header {
 
 /* ++++++++++++++++++++++++++++++ SECTION HEBERGEMENTS ++++++++++++++++++++++++++++++ */
 .sectionHebergement {
-  padding: 0 70px;
   margin-bottom: 20px;
   display: flex;
   gap: 30px;
 }
 
 .sectionHebergement h2 {
-  font-size: 20pt;
+  font-size: 18pt;
   font-weight: 700;
   margin-bottom: 25px;
 }
@@ -248,7 +267,6 @@ header {
   flex-basis: 31%;
   height: 220px;
   justify-content: flex-end;
-  box-shadow: 0 0 15px rgba(0, 0, 0, 0.2);
 }
 
 .frameHebergement img {
@@ -258,10 +276,6 @@ header {
   object-fit: cover;
   object-position: center;
   min-width: 260px;
-}
-
-.frameHebergement:hover {
-  transform: scale(1.03);
 }
 
 .descriptionHebergement {
@@ -309,7 +323,6 @@ header {
   background-color: white;
   border-radius: 15px;
   height: 160px;
-  box-shadow: 0 0 15px rgba(0, 0, 0, 0.2);
 }
 
 .framePopulaire img {
@@ -318,10 +331,6 @@ header {
   border-radius: 15px 0 0 15px;
   object-fit: cover;
   min-width: 160px;
-}
-
-.framePopulaire:hover {
-  transform: scale(1.03);
 }
 
 .descriptionPopulaire {
@@ -335,6 +344,7 @@ header {
 
 .descriptionPopulaire h3,
 .descriptionPopulaire p {
+  padding-top: 5px;
   margin-bottom: 10px;
 }
 
@@ -347,11 +357,73 @@ header {
 }
 
 /* ++++++++++++++++++++++++++++++ SECTION ACTIVITE ++++++++++++++++++++++++++++++ */
+.sectionActivite {
+  display: flex;
+  flex-direction: column;
+  margin-bottom: 20px;
+}
+
+.sectionActivite h2 {
+  font-size: 18pt;
+  font-weight: 700;
+  margin-bottom: 15px;
+}
+
+.sectionActivite h3 {
+  font-size: 14pt;
+  font-weight: 700;
+}
+
+.blocActivite{
+  display: flex;
+  justify-content: space-between;
+}
+
+.blocActivite a{
+  display: inline-flex;
+  flex-direction: column;
+}
+
+.frameActivite1{
+  border-radius: 15px;
+  width: 23%;
+  height: 420px;
+}
+
+.doubleFrame{
+  display: flex;
+  flex-direction: column;
+  flex-basis: 23%;
+  justify-content: space-between;
+  height: 420px;
+}
+
+.frameActivite2{
+  height: 50%;
+  border-radius: 15px;
+}
+
+.frameActivite3{
+  height: 40%;
+  border-radius: 15px;
+}
+
+.imageActivite{
+  height: 90%;
+  width: 100%;
+  border-radius: 15px 15px 0 0;
+  object-fit: cover;
+}
+
+.titreActivite{
+  padding: 10px 0 10px 10px;
+}
+
 
 /* ++++++++++++++++++++++++++++++ SECTION FOOTER ++++++++++++++++++++++++++++++ */
 footer {
   display: flex;
-  padding: 20px 30px;
+  padding: 30px 50px;
   margin-top: 40px;
   background-color: var(--colorGrey);
 }
@@ -360,8 +432,14 @@ footer div {
   flex: 1;
 }
 
+footer h3{
+  font-size: 12pt;
+  font-weight: 800;
+  margin-bottom: 20px;
+}
+
 footer li {
-  margin-bottom: 5px;
+  margin-bottom: 10px;
 }
 
 footer a:hover {
