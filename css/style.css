@@ -459,7 +459,7 @@ footer {
   background-color: var(--colorGrey);
 }
 
-footer div {
+.blocFooter {
   flex: 1;
 }
 
@@ -556,6 +556,10 @@ footer a:hover {
     min-width: inherit;
   }
 
+  .blocHebergementListe .container {
+    flex-direction: column;
+  }
+
   /* ------------------------------ SECTION ACTIVITE ------------------------------ */
   .sectionActivite{
     padding: 25px;
@@ -597,6 +601,13 @@ footer a:hover {
   }
 
   /* ------------------------------ SECTION FOOTER ------------------------------ */
+  Footer{
+    justify-content: space-between;
+  }
+
+  .blocFooter {
+    flex: inherit;
+  }
 
 }
 
@@ -636,5 +647,10 @@ footer a:hover {
   }
 
   /* ------------------------------ SECTION FOOTER ------------------------------ */
+  Footer{
+    flex-direction: column;
+    gap: 25px;
+  }
+
 
 }
