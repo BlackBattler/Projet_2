@@ -55,14 +55,6 @@ main {
   transform: scale(1.01);
 }
 
-.imagePositionCenter {
-  object-position: center;
-}
-
-.imagePositionTop {
-  object-position: top;
-}
-
 /* ++++++++++++++++++++++++++++++ SECTION HEADER ++++++++++++++++++++++++++++++ */
 
 .headerNav {
@@ -172,12 +164,18 @@ main {
   gap: 25px;
 }
 
+.filterListe{
+  display: flex;
+  gap: 25px;
+}
+
 .blocFilter {
   display: flex;
   align-items: center;
   border: 3px solid var(--colorGrey);
   border-radius: 50px;
   cursor: pointer;
+  min-width: 265px;
 }
 
 .searchFilter .fa-solid {
@@ -187,7 +185,7 @@ main {
   background-color: var(--colorLightBlue);
   border-radius: 50%;
   margin: -3px;
-  width: 50px;
+  min-width: 50px;
   height: 50px;
   align-items: center;
   justify-content: center;
@@ -340,7 +338,7 @@ main {
   flex-basis: 60%;
   padding: 10px 25px 5px 10px;
   justify-content: space-between;
-  min-width: 250px;
+  min-width: 200px;
 }
 
 .descriptionPopulaire h3,
@@ -361,7 +359,7 @@ main {
 .sectionActivite {
   display: flex;
   flex-direction: column;
-  margin-bottom: 20px;
+  margin-bottom: 40px;
 }
 
 .sectionActivite h2 {
@@ -430,17 +428,34 @@ main {
   object-fit: cover;
 }
 
+.imageActivitePosition1{
+  object-position: center;
+}
+.imageActivitePosition2{
+  object-position: center;
+}
+.imageActivitePosition3{
+  object-position: center;
+}
+.imageActivitePosition4{
+  object-position: top;
+}
+.imageActivitePosition5{
+  object-position: top;
+}
+.imageActivitePosition6{
+  object-position: center;
+}
+
 .titreActivite {
   height: 10%;
   padding: 10px 0 10px 10px;
 }
 
-
 /* ++++++++++++++++++++++++++++++ SECTION FOOTER ++++++++++++++++++++++++++++++ */
 footer {
   display: flex;
   padding: 30px 50px;
-  margin-top: 40px;
   background-color: var(--colorGrey);
 }
 
@@ -467,13 +482,22 @@ footer a:hover {
 
 /* ++++++++++++++++++++++++++++++ TABLETTE ++++++++++++++++++++++++++++++ */
 @media (max-width: 992px) {
+  /* ++++++++++++++++++++++++++++++ GENERAL ++++++++++++++++++++++++++++++ */
   body {
     border: 5px solid green;
   }
+  
+  header {
+    padding: inherit;
+  }
+
+  main{
+    padding: inherit;
+  }
 
   /* ------------------------------ SECTION HEADER ------------------------------ */
-  header {
-    padding: 0 25px;
+  .logoBooki {
+    padding-left: 50px;
   }
 
   /* ------------------------------ SEARCH BAR TITLE ------------------------------ */
@@ -510,6 +534,11 @@ footer a:hover {
     background-color: inherit;
   }
 
+  /* ------------------------------ FILTER ------------------------------ */
+  .filterListe{
+    flex-wrap: wrap;
+    gap: 10px;
+  }
 
   /* ------------------------------ SECTION HEBERGEMENT ------------------------------ */
   .sectionHebergement {
@@ -527,10 +556,53 @@ footer a:hover {
     min-width: inherit;
   }
 
+  /* ------------------------------ SECTION ACTIVITE ------------------------------ */
+  .sectionActivite{
+    padding: 25px;
+    margin-bottom: 20px;
+  }
+
+  .blocActivite{
+    flex-direction: column;
+    gap: 25px;
+  }
+
+  .frameActivite1{
+    height: 200px;
+    width: 100%;
+  }
+
+  .doubleFrame{
+    gap: 25px;
+  }
+
+  .frameActivite2{
+    height: 200px;
+  }
+
+  .frameActivite3{
+    height: 200px;
+  }
+
+  .imageActivite1 {
+    height: 80%;
+  }
+
+  .imageActivite3 {
+    height: 80%;
+  }
+
+  .imageActivitePosition4{
+    object-position: center;
+  }
+
+  /* ------------------------------ SECTION FOOTER ------------------------------ */
+
 }
 
 /* ++++++++++++++++++++++++++++++ MOBILE ++++++++++++++++++++++++++++++ */
 @media (max-width: 767px) {
+  /* ++++++++++++++++++++++++++++++ GENERAL ++++++++++++++++++++++++++++++ */
   body {
     border: 5px solid red;
   }
@@ -557,4 +629,12 @@ footer a:hover {
     border-top-color: transparent;
     border-bottom-color: var(--colorBlue);
   }
+
+  /* ------------------------------ FILTER ------------------------------ */
+  .blocFilter{
+    min-width: inherit;
+  }
+
+  /* ------------------------------ SECTION FOOTER ------------------------------ */
+
 }
