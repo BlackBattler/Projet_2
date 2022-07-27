@@ -32,36 +32,37 @@ strong {
   color: var(--colorGrey);
 }
 
-header{
+header {
   padding: 0 50px;
 }
 
-main{
+main {
   padding: 0 50px;
 }
 
 /* ++++++++++++++++++++++++++++++ EFFECTS ++++++++++++++++++++++++++++++ */
-.shadowEffect{
+.shadowEffect {
   box-shadow: 0 0 15px rgba(0, 0, 0, 0.2);
 }
 
-.hoverFilterEffect:hover{
+.hoverFilterEffect:hover {
   color: var(--colorBlue);
   background-color: var(--colorGrey);
   transform: scale(1.03);
 }
 
-.hoverCardEffect:hover{
+.hoverCardEffect:hover {
   transform: scale(1.01);
 }
 
-.imagePositionCenter{
+.imagePositionCenter {
   object-position: center;
 }
 
-.imagePositionTop{
+.imagePositionTop {
   object-position: top;
 }
+
 /* ++++++++++++++++++++++++++++++ SECTION HEADER ++++++++++++++++++++++++++++++ */
 
 .headerNav {
@@ -374,23 +375,23 @@ main{
   font-weight: 700;
 }
 
-.blocActivite{
+.blocActivite {
   display: flex;
   justify-content: space-between;
 }
 
-.blocActivite a{
+.blocActivite a {
   display: inline-flex;
   flex-direction: column;
 }
 
-.frameActivite1{
+.frameActivite1 {
   border-radius: 15px;
   width: 23%;
   height: 420px;
 }
 
-.doubleFrame{
+.doubleFrame {
   display: flex;
   flex-direction: column;
   flex-basis: 23%;
@@ -398,24 +399,39 @@ main{
   height: 420px;
 }
 
-.frameActivite2{
+.frameActivite2 {
   height: 50%;
   border-radius: 15px;
 }
 
-.frameActivite3{
+.frameActivite3 {
   height: 40%;
   border-radius: 15px;
 }
 
-.imageActivite{
+.imageActivite1 {
   height: 90%;
   width: 100%;
   border-radius: 15px 15px 0 0;
   object-fit: cover;
 }
 
-.titreActivite{
+.imageActivite2 {
+  height: 80%;
+  width: 100%;
+  border-radius: 15px 15px 0 0;
+  object-fit: cover;
+}
+
+.imageActivite3 {
+  height: 75%;
+  width: 100%;
+  border-radius: 15px 15px 0 0;
+  object-fit: cover;
+}
+
+.titreActivite {
+  height: 10%;
   padding: 10px 0 10px 10px;
 }
 
@@ -432,7 +448,7 @@ footer div {
   flex: 1;
 }
 
-footer h3{
+footer h3 {
   font-size: 12pt;
   font-weight: 800;
   margin-bottom: 20px;
