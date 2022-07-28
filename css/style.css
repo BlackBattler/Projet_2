@@ -9,7 +9,7 @@
 }
 
 /* ++++++++++++++++++++++++++++++ GENERAL ++++++++++++++++++++++++++++++ */
-* {
+body {
   box-sizing: border-box;
   font-family: "Raleway", "sans-serif";
 }
@@ -159,14 +159,16 @@ main {
   flex-wrap: wrap;
   align-items: center;
   margin-bottom: 40px;
+}
+
+.searchFilter p{
   font-weight: 700;
   font-size: 14pt;
-  gap: 25px;
+  padding-right: 25px;
 }
 
 .filterListe{
   display: flex;
-  gap: 25px;
 }
 
 .blocFilter {
@@ -175,7 +177,7 @@ main {
   border: 3px solid var(--colorGrey);
   border-radius: 50px;
   cursor: pointer;
-  min-width: 265px;
+  margin-right:25px;
 }
 
 .searchFilter .fa-solid {
@@ -193,6 +195,8 @@ main {
 
 .searchFilter span {
   padding: 0 30px 0 20px;
+  font-weight: 700;
+  font-size: 14pt;
 }
 
 /* -------------------- INFORMATION -------------------- */
@@ -217,13 +221,13 @@ main {
 }
 
 /* ++++++++++++++++++++++++++++++ SECTION HEBERGEMENTS ++++++++++++++++++++++++++++++ */
-.sectionHebergement {
-  margin-bottom: 20px;
+.sectionHebergement{
   display: flex;
-  gap: 30px;
+  gap: 25px;
+  margin-bottom: 40px;
 }
 
-.sectionHebergement h2 {
+.sectionHebergement h2{
   font-size: 18pt;
   font-weight: 700;
   margin-bottom: 25px;
@@ -234,125 +238,144 @@ main {
   font-weight: 700;
 }
 
-/* -------------------- HEBERGEMENT -------------------- */
-.blocHebergement {
+/* -------------------- DIV HEBERGEMENT -------------------- */
+.divHebergement{
+  display: flex;
+  flex-direction: column;
+  flex: 1 1 66%;
   background-color: var(--colorGrey);
-  flex-basis: 66%;
   border-radius: 15px;
   padding: 25px 25px;
 }
 
-.blocHebergementListe {
+.divHebergement .container{
   display: flex;
-  flex-direction: column;
+  flex-wrap: wrap;
+  gap: 25px;
   margin-bottom: 25px;
-  gap: 20px;
 }
 
-.blocHebergementListe .container {
-  display: flex;
-  gap: 20px;
-}
-
-.blocHebergementListe a {
-  display: inline-flex;
-  flex-direction: column;
-  justify-content: space-between;
-}
-
-.frameHebergement {
+.divHebergement .container .card{
   background-color: white;
-  border-radius: 15px;
-  flex-basis: 31%;
-  height: 220px;
-  justify-content: flex-end;
-}
-
-.frameHebergement img {
-  height: 65%;
-  padding: 3px;
-  border-radius: 15px 15px 0 0;
-  object-fit: cover;
-  object-position: center;
-  min-width: 260px;
-}
-
-.descriptionHebergement {
   display: flex;
   flex-direction: column;
   justify-content: space-between;
-  padding: 5px 0 5px 10px;
-  flex-basis: 35%;
+  flex: 1 1 30%;
+  height: 220px;
+  border-radius: 15px;
 }
 
-.ratingHebergement .fa-solid {
+.divHebergement .container .card img{
+  height: 60%;
+  flex: 1 1 100%;
+  object-fit: cover;
+  padding: 4px;
+  border-radius: 15px 15px 0 0;
+}
+
+.divHebergement .container .card .image1{
+  object-position: center;
+}
+
+.divHebergement .container .card .image2{
+  object-position: 50% 60%;
+}
+
+.divHebergement .container .card .image3{
+  object-position: 50% 65%;
+}
+
+.divHebergement .container .card .image4{
+  object-position: 50% 65%;
+}
+
+.divHebergement .container .card .image5{
+  object-position: center;
+}
+
+.divHebergement .container .card .image6{
+  object-position: 50% 60%;
+}
+
+.divHebergement .container .card .divDescription{
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+  height: 40%;
+  padding: 5px 0 5px 10px;
+}
+
+.divHebergement .container .card .divDescription .description{
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+}
+
+.divHebergement .container .card .divDescription .fa-solid{
   font-size: 12px;
 }
 
-.showMore {
+.divHebergement .showMore{
   font-weight: 700;
+  cursor: pointer;
 }
 
-/* -------------------- SECTION POPULAIRE -------------------- */
-.blocPopulaire {
+.divHebergement .showMore:hover{
+  color: var(--colorBlue);
+}
+
+/* -------------------- DIV POPULAIRE -------------------- */
+.divPopulaire{
+  flex: 1 1 33%;
   background-color: var(--colorGrey);
-  flex-basis: 33%;
   border-radius: 15px;
   padding: 25px 25px;
 }
 
-.blocPopulaire h2 {
+.divPopulaire h2{
   display: flex;
   justify-content: space-between;
 }
 
-.blocPopulaireListe {
+.divPopulaire .container{
   display: flex;
   flex-direction: column;
   gap: 25px;
 }
 
-.blocPopulaireListe a {
-  display: inline-flex;
-}
-
-.framePopulaire {
+.divPopulaire .container .card{
   display: flex;
-  justify-content: space-between;
   background-color: white;
   border-radius: 15px;
   height: 160px;
+  cursor: pointer;
 }
 
-.framePopulaire img {
-  width: 40%;
-  padding: 3px;
-  border-radius: 15px 0 0 15px;
+.divPopulaire .container .card img{
   object-fit: cover;
-  min-width: 160px;
+  width: 30%;
+  padding: 4px;
+  border-radius: 15px 0 0 15px;
 }
 
-.descriptionPopulaire {
+.divPopulaire .container .card .divDescription{
   display: flex;
   flex-direction: column;
-  flex-basis: 60%;
-  padding: 10px 25px 5px 10px;
   justify-content: space-between;
-  min-width: 200px;
+  padding: 15px 25px 5px 15px;
+  flex: 1 1 65%;
 }
 
-.descriptionPopulaire h3,
-.descriptionPopulaire p {
+.divPopulaire .container .card .divDescription .description h3,
+.divPopulaire .container .card .divDescription .description p{
   padding-top: 5px;
   margin-bottom: 10px;
 }
 
-.ratingPopulaire .fa-solid {
-  font-size: 12px;
-}
 
-.populaire3 {
-  object-position: inherit;
+.divPopulaire .container .card .divDescription .fa-solid{
+  font-size: 12px;
+  padding-bottom: 10px;
 }
 
 /* ++++++++++++++++++++++++++++++ SECTION ACTIVITE ++++++++++++++++++++++++++++++ */
