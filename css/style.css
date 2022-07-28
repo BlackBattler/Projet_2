@@ -104,18 +104,18 @@ main {
 }
 
 /* -------------------- SEARCH BAR -------------------- */
-.searchBar {
+.formSearchBar {
   display: flex;
   margin-bottom: 30px;
 }
 
-.searchBar i {
+.formSearchBar .fa-solid {
   padding: 15px 15px;
   background-color: var(--colorGrey);
   border-radius: 12px 0px 0px 12px;
 }
 
-.searchBar input {
+.formSearchBar input {
   flex-basis: 250px;
   border: 1px solid var(--colorGrey);
   font-size: 16pt;
@@ -123,11 +123,11 @@ main {
   overflow: auto;
 }
 
-.searchBar input::placeholder {
+.formSearchBar input::placeholder {
   font-weight: 500;
 }
 
-.searchBar button {
+.formSearchBar button {
   padding: 0px 12px;
   background-color: var(--colorBlue);
   color: white;
@@ -137,15 +137,14 @@ main {
   border: 0;
   cursor: pointer;
   opacity: 1;
-  transition: transform 150ms;
 }
 
-.searchBar button:hover {
+.formSearchBar button:hover {
   opacity: 0.9;
   transform: scale(1.01);
 }
 
-.searchBar button:active {
+.formSearchBar button:active {
   transform: scale(1);
 }
 
@@ -154,46 +153,45 @@ main {
 }
 
 /* -------------------- FILTER -------------------- */
-.searchFilter {
+.divFiltre {
   display: flex;
-  flex-wrap: wrap;
   align-items: center;
   margin-bottom: 40px;
 }
 
-.searchFilter p{
+.divFiltre>p {
   font-weight: 700;
   font-size: 14pt;
   padding-right: 25px;
 }
 
-.filterListe{
+.divFiltre .container {
   display: flex;
+  gap: 25px;
 }
 
-.blocFilter {
+.divFiltre .container .blocFiltre {
   display: flex;
   align-items: center;
   border: 3px solid var(--colorGrey);
   border-radius: 50px;
   cursor: pointer;
-  margin-right:25px;
 }
 
-.searchFilter .fa-solid {
+.divFiltre .container .blocFiltre .fa-solid {
   display: flex;
   color: var(--colorBlue);
-  font-size: 25px;
+  font-size: 20px;
   background-color: var(--colorLightBlue);
+  height: 50px;
+  width: 50px;
   border-radius: 50%;
   margin: -3px;
-  min-width: 50px;
-  height: 50px;
   align-items: center;
   justify-content: center;
 }
 
-.searchFilter span {
+.divFiltre .container .blocFiltre p {
   padding: 0 30px 0 20px;
   font-weight: 700;
   font-size: 14pt;
@@ -221,13 +219,13 @@ main {
 }
 
 /* ++++++++++++++++++++++++++++++ SECTION HEBERGEMENTS ++++++++++++++++++++++++++++++ */
-.sectionHebergement{
+.sectionHebergement {
   display: flex;
   gap: 25px;
   margin-bottom: 40px;
 }
 
-.sectionHebergement h2{
+.sectionHebergement h2 {
   font-size: 18pt;
   font-weight: 700;
   margin-bottom: 25px;
@@ -239,7 +237,7 @@ main {
 }
 
 /* -------------------- DIV HEBERGEMENT -------------------- */
-.divHebergement{
+.divHebergement {
   display: flex;
   flex-direction: column;
   flex: 1 1 66%;
@@ -248,14 +246,14 @@ main {
   padding: 25px 25px;
 }
 
-.divHebergement .container{
+.divHebergement .container {
   display: flex;
   flex-wrap: wrap;
   gap: 25px;
   margin-bottom: 25px;
 }
 
-.divHebergement .container .card{
+.divHebergement .container .card {
   background-color: white;
   display: flex;
   flex-direction: column;
@@ -265,7 +263,7 @@ main {
   border-radius: 15px;
 }
 
-.divHebergement .container .card img{
+.divHebergement .container .card img {
   height: 60%;
   flex: 1 1 100%;
   object-fit: cover;
@@ -273,31 +271,31 @@ main {
   border-radius: 15px 15px 0 0;
 }
 
-.divHebergement .container .card .image1{
+.divHebergement .container .card .image1 {
   object-position: center;
 }
 
-.divHebergement .container .card .image2{
+.divHebergement .container .card .image2 {
   object-position: 50% 60%;
 }
 
-.divHebergement .container .card .image3{
+.divHebergement .container .card .image3 {
   object-position: 50% 65%;
 }
 
-.divHebergement .container .card .image4{
+.divHebergement .container .card .image4 {
   object-position: 50% 65%;
 }
 
-.divHebergement .container .card .image5{
+.divHebergement .container .card .image5 {
   object-position: center;
 }
 
-.divHebergement .container .card .image6{
+.divHebergement .container .card .image6 {
   object-position: 50% 60%;
 }
 
-.divHebergement .container .card .divDescription{
+.divHebergement .container .card .divDescription {
   display: flex;
   flex-direction: column;
   justify-content: space-between;
@@ -305,45 +303,45 @@ main {
   padding: 5px 0 5px 10px;
 }
 
-.divHebergement .container .card .divDescription .description{
+.divHebergement .container .card .divDescription .description {
   display: flex;
   flex-direction: column;
   justify-content: space-between;
 }
 
-.divHebergement .container .card .divDescription .fa-solid{
+.divHebergement .container .card .divDescription .fa-solid {
   font-size: 12px;
 }
 
-.divHebergement .showMore{
+.divHebergement .showMore {
   font-weight: 700;
   cursor: pointer;
 }
 
-.divHebergement .showMore:hover{
+.divHebergement .showMore:hover {
   color: var(--colorBlue);
 }
 
 /* -------------------- DIV POPULAIRE -------------------- */
-.divPopulaire{
+.divPopulaire {
   flex: 1 1 33%;
   background-color: var(--colorGrey);
   border-radius: 15px;
   padding: 25px 25px;
 }
 
-.divPopulaire h2{
+.divPopulaire h2 {
   display: flex;
   justify-content: space-between;
 }
 
-.divPopulaire .container{
+.divPopulaire .container {
   display: flex;
   flex-direction: column;
   gap: 25px;
 }
 
-.divPopulaire .container .card{
+.divPopulaire .container .card {
   display: flex;
   background-color: white;
   border-radius: 15px;
@@ -351,14 +349,14 @@ main {
   cursor: pointer;
 }
 
-.divPopulaire .container .card img{
+.divPopulaire .container .card img {
   object-fit: cover;
   width: 30%;
   padding: 4px;
   border-radius: 15px 0 0 15px;
 }
 
-.divPopulaire .container .card .divDescription{
+.divPopulaire .container .card .divDescription {
   display: flex;
   flex-direction: column;
   justify-content: space-between;
@@ -367,13 +365,13 @@ main {
 }
 
 .divPopulaire .container .card .divDescription .description h3,
-.divPopulaire .container .card .divDescription .description p{
+.divPopulaire .container .card .divDescription .description p {
   padding-top: 5px;
   margin-bottom: 10px;
 }
 
 
-.divPopulaire .container .card .divDescription .fa-solid{
+.divPopulaire .container .card .divDescription .fa-solid {
   font-size: 12px;
   padding-bottom: 10px;
 }
@@ -451,22 +449,27 @@ main {
   object-fit: cover;
 }
 
-.imageActivitePosition1{
+.imageActivitePosition1 {
   object-position: center;
 }
-.imageActivitePosition2{
+
+.imageActivitePosition2 {
   object-position: center;
 }
-.imageActivitePosition3{
+
+.imageActivitePosition3 {
   object-position: center;
 }
-.imageActivitePosition4{
+
+.imageActivitePosition4 {
   object-position: top;
 }
-.imageActivitePosition5{
+
+.imageActivitePosition5 {
   object-position: top;
 }
-.imageActivitePosition6{
+
+.imageActivitePosition6 {
   object-position: center;
 }
 
@@ -499,181 +502,4 @@ footer li {
 footer a:hover {
   font-weight: 500;
   color: var(--colorBlue);
-}
-
-/* ________________________________________ MEDIA QUERIES ________________________________________ */
-
-/* ++++++++++++++++++++++++++++++ TABLETTE ++++++++++++++++++++++++++++++ */
-@media (max-width: 992px) {
-  /* ++++++++++++++++++++++++++++++ GENERAL ++++++++++++++++++++++++++++++ */
-  body {
-    border: 5px solid green;
-  }
-  
-  header {
-    padding: inherit;
-  }
-
-  main{
-    padding: inherit;
-  }
-
-  /* ------------------------------ SECTION HEADER ------------------------------ */
-  .logoBooki {
-    padding-left: 50px;
-  }
-
-  /* ------------------------------ SEARCH BAR TITLE ------------------------------ */
-  .searchTitle {
-    margin-bottom: 30px;
-  }
-
-  /* ------------------------------ SEARCH BAR ------------------------------ */
-  .sectionRecherche {
-    padding: 0 25px;
-  }
-
-  .searchBar input {
-    flex-basis: 100%;
-  }
-
-  .searchBarText {
-    display: none;
-  }
-
-  .searchBar button {
-    padding: 0px 12px;
-    background-color: var(--colorBlue);
-    color: white;
-    border-radius: 12px;
-    border: 0;
-    cursor: pointer;
-    opacity: 1;
-    transition: transform 100ms;
-  }
-
-  .fa-solid.fa-magnifying-glass {
-    display: inherit;
-    background-color: inherit;
-  }
-
-  /* ------------------------------ FILTER ------------------------------ */
-  .filterListe{
-    flex-wrap: wrap;
-    gap: 10px;
-  }
-
-  /* ------------------------------ SECTION HEBERGEMENT ------------------------------ */
-  .sectionHebergement {
-    flex-direction: column-reverse;
-    padding: 0;
-  }
-
-  .sectionHebergement>div {
-    padding: 25px;
-    border-radius: 0;
-  }
-
-  .blocHebergement {
-    background-color: inherit;
-    min-width: inherit;
-  }
-
-  .blocHebergementListe .container {
-    flex-direction: column;
-  }
-
-  /* ------------------------------ SECTION ACTIVITE ------------------------------ */
-  .sectionActivite{
-    padding: 25px;
-    margin-bottom: 20px;
-  }
-
-  .blocActivite{
-    flex-direction: column;
-    gap: 25px;
-  }
-
-  .frameActivite1{
-    height: 200px;
-    width: 100%;
-  }
-
-  .doubleFrame{
-    gap: 25px;
-  }
-
-  .frameActivite2{
-    height: 200px;
-  }
-
-  .frameActivite3{
-    height: 200px;
-  }
-
-  .imageActivite1 {
-    height: 80%;
-  }
-
-  .imageActivite3 {
-    height: 80%;
-  }
-
-  .imageActivitePosition4{
-    object-position: center;
-  }
-
-  /* ------------------------------ SECTION FOOTER ------------------------------ */
-  Footer{
-    justify-content: space-between;
-  }
-
-  .blocFooter {
-    flex: inherit;
-  }
-
-}
-
-/* ++++++++++++++++++++++++++++++ MOBILE ++++++++++++++++++++++++++++++ */
-@media (max-width: 767px) {
-  /* ++++++++++++++++++++++++++++++ GENERAL ++++++++++++++++++++++++++++++ */
-  body {
-    border: 5px solid red;
-  }
-
-  /* ------------------------------ HEADER ------------------------------ */
-  .logoBooki {
-    margin: auto;
-  }
-
-  .blocNav {
-    flex-basis: 100%;
-    margin-bottom: 10px;
-  }
-
-  .blocNav a {
-    padding: 15px;
-    flex-basis: 50%;
-    border-bottom: 3px solid var(--colorGrey);
-    text-align: center;
-    font-size: 16pt;
-  }
-
-  .blocNav a:hover {
-    border-top-color: transparent;
-    border-bottom-color: var(--colorBlue);
-  }
-
-  /* ------------------------------ FILTER ------------------------------ */
-  .blocFilter{
-    min-width: inherit;
-  }
-
-  /* ------------------------------ SECTION FOOTER ------------------------------ */
-  Footer{
-    flex-direction: column;
-    gap: 25px;
-  }
-
-
 }
