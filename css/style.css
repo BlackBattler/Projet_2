@@ -1,4 +1,4 @@
-/* ++++++++++++++++++++++++++++++ FONT ++++++++++++++++++++++++++++++ */
+/* ++++++++++++++++++++++++++++++ IMPORT ++++++++++++++++++++++++++++++ */
 @import url("https://fonts.googleapis.com/css2?family=Raleway:wght@300;400;500;600;700;800;900&display=swap");
 
 /* ++++++++++++++++++++++++++++++ VARIABLES ++++++++++++++++++++++++++++++ */
@@ -170,6 +170,11 @@ main {
   gap: 25px;
 }
 
+.divFiltre .container .sousContainer {
+  display: flex;
+  gap: 25px;
+}
+
 .divFiltre .container .blocFiltre {
   display: flex;
   align-items: center;
@@ -184,7 +189,7 @@ main {
   font-size: 20px;
   background-color: var(--colorLightBlue);
   height: 50px;
-  width: 50px;
+  min-width: 50px;
   border-radius: 50%;
   margin: -3px;
   align-items: center;
@@ -502,4 +507,195 @@ footer li {
 footer a:hover {
   font-weight: 500;
   color: var(--colorBlue);
+}
+
+/* ________________________________________ MEDIA QUERIES ________________________________________ */
+
+/* ++++++++++++++++++++++++++++++ TABLETTE ++++++++++++++++++++++++++++++ */
+@media (max-width: 992px) {
+
+  /* ++++++++++++++++++++++++++++++ GENERAL ++++++++++++++++++++++++++++++ */
+  header {
+    padding: inherit;
+  }
+
+  main {
+    padding: inherit;
+  }
+
+  /* ------------------------------ SECTION HEADER ------------------------------ */
+  .logoBooki {
+    padding-left: 50px;
+  }
+
+  /* ------------------------------ SEARCH BAR TITLE ------------------------------ */
+  .searchTitle {
+    margin-bottom: 30px;
+  }
+
+  /* ------------------------------ SEARCH BAR ------------------------------ */
+  .sectionRecherche {
+    padding: 0 25px;
+  }
+
+  .formSearchBar input {
+    flex-basis: 100%;
+  }
+
+  .searchBarText {
+    display: none;
+  }
+
+  .formSearchBar button {
+    padding: 0px 12px;
+    background-color: var(--colorBlue);
+    color: white;
+    border-radius: 12px;
+    border: 0;
+    cursor: pointer;
+    opacity: 1;
+    transition: transform 100ms;
+  }
+
+  .fa-solid.fa-magnifying-glass {
+    display: inherit;
+    background-color: inherit;
+  }
+
+  /* ------------------------------ FILTER ------------------------------ */
+  .divFiltre {
+    flex-wrap: wrap;
+    gap: 10px;
+  }
+
+  .divFiltre .container {
+    flex-wrap: wrap;
+    gap: 10px;
+  }
+
+  .divFiltre .container .sousContainer {
+    gap: 10px;
+  }
+
+
+  /* ------------------------------ SECTION HEBERGEMENT ------------------------------ */
+  .sectionHebergement {
+    flex-direction: column-reverse;
+    padding: 0;
+  }
+
+  .divHebergement{
+    border-radius: 0;
+    background-color: white;
+  }
+
+  .divHebergement .container .card{
+    flex-basis: 40%;
+  }
+
+  .divPopulaire{
+    border-radius: 0;
+  }
+  
+  /* ------------------------------ SECTION ACTIVITE ------------------------------ */
+  .sectionActivite {
+    padding: 25px;
+    margin-bottom: 20px;
+  }
+
+  .blocActivite {
+    flex-direction: column;
+    gap: 25px;
+  }
+
+  .frameActivite1 {
+    height: 250px;
+    width: 100%;
+  }
+
+  .doubleFrame {
+    gap: 25px;
+  }
+
+  .frameActivite2 {
+    height: 250px;
+  }
+
+  .frameActivite3 {
+    height: 250px;
+  }
+
+  .imageActivite1 {
+    height: 80%;
+  }
+
+  .imageActivite3 {
+    height: 80%;
+  }
+
+  .imageActivitePosition1 {
+    object-position: 50% 50%;
+  }
+
+  .imageActivitePosition4 {
+    object-position: 50% 70%;
+  }
+
+  .imageActivitePosition5 {
+    object-position: 50% 10%;
+  }
+
+  .imageActivitePosition6 {
+    object-position: 50% 40%;
+  }
+
+  /* ------------------------------ SECTION FOOTER ------------------------------ */
+  Footer {
+    justify-content: space-between;
+  }
+
+  .blocFooter {
+    flex: inherit;
+  }
+
+}
+
+/* ++++++++++++++++++++++++++++++ MOBILE ++++++++++++++++++++++++++++++ */
+@media (max-width: 767px) {
+
+  /* ------------------------------ HEADER ------------------------------ */
+  .logoBooki {
+    margin: auto;
+  }
+
+  .blocNav {
+    flex-basis: 100%;
+    margin-bottom: 10px;
+  }
+
+  .blocNav a {
+    padding: 15px;
+    flex-basis: 50%;
+    border-bottom: 3px solid var(--colorGrey);
+    text-align: center;
+    font-size: 16pt;
+  }
+
+  .blocNav a:hover {
+    border-top-color: transparent;
+    border-bottom-color: var(--colorBlue);
+  }
+
+  /* ------------------------------ FILTER ------------------------------ */
+  .blocFilter {
+    min-width: inherit;
+  }
+
+  /* ------------------------------ SECTION FOOTER ------------------------------ */
+  Footer {
+    flex-direction: column;
+    gap: 25px;
+  }
+
+
 }
