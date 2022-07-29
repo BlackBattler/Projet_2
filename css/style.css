@@ -691,6 +691,11 @@ footer a:hover {
     min-width: inherit;
   }
 
+  /* -------------------- DIV HEBERGEMENT -------------------- */
+  .divHebergement .container .card{
+    flex-basis: 100%;
+  }
+
   /* ------------------------------ SECTION FOOTER ------------------------------ */
   Footer {
     flex-direction: column;
