@@ -510,14 +510,22 @@ footer a:hover {
 }
 
 /* ________________________________________ MEDIA QUERIES ________________________________________ */
-@media (max-width: 1024px) {
-  .divPopulaire .container .card .divDescription .description h3{
-    font-size: 12pt;
+@media (max-width: 1321px){
+
+  .divHebergement .container .card{
+    flex-basis: 40%;
   }
 
   .sectionActivite h3{
     font-size: 12pt;
   }
+}
+
+@media (max-width: 1024px) {
+  .divPopulaire .container .card .divDescription .description h3{
+    font-size: 12pt;
+  }
+
 }
 
 
@@ -557,6 +565,7 @@ footer a:hover {
   }
 
   .formSearchBar button {
+    margin-left: -12px;
     padding: 0px 12px;
     background-color: var(--colorBlue);
     color: white;
@@ -587,6 +596,9 @@ footer a:hover {
     gap: 10px;
   }
 
+  .divFiltre .container .blocFiltre p{
+    padding: 0 20px 0 15px;
+  }
 
   /* ------------------------------ SECTION HEBERGEMENT ------------------------------ */
   .sectionHebergement {
@@ -597,10 +609,6 @@ footer a:hover {
   .divHebergement{
     border-radius: 0;
     background-color: white;
-  }
-
-  .divHebergement .container .card{
-    flex-basis: 40%;
   }
 
   .divPopulaire{
