@@ -510,6 +510,16 @@ footer a:hover {
 }
 
 /* ________________________________________ MEDIA QUERIES ________________________________________ */
+@media (max-width: 1024px) {
+  .divPopulaire .container .card .divDescription .description h3{
+    font-size: 12pt;
+  }
+
+  .sectionActivite h3{
+    font-size: 12pt;
+  }
+}
+
 
 /* ++++++++++++++++++++++++++++++ TABLETTE ++++++++++++++++++++++++++++++ */
 @media (max-width: 992px) {
@@ -596,11 +606,19 @@ footer a:hover {
   .divPopulaire{
     border-radius: 0;
   }
+
+  .divPopulaire .container .card .divDescription .description h3{
+    font-size: 14pt;
+  }
   
   /* ------------------------------ SECTION ACTIVITE ------------------------------ */
   .sectionActivite {
     padding: 25px;
     margin-bottom: 20px;
+  }
+
+  .sectionActivite h3{
+    font-size: 14pt;
   }
 
   .blocActivite {
