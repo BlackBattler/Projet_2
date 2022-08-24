@@ -47,7 +47,6 @@ main {
 
 .hoverFilterEffect:hover {
   color: var(--colorBlue);
-  background-color: var(--colorGrey);
   transform: scale(1.03);
 }
 
@@ -66,8 +65,11 @@ main {
 }
 
 .logoBooki {
-  padding-left: 25px;
   margin-right: auto;
+}
+
+.logoBooki img {
+  width: 200px;
 }
 
 .blocNav {
@@ -159,10 +161,16 @@ main {
   margin-bottom: 40px;
 }
 
-.divFiltre>p {
+.nomFiltre {
   font-weight: 700;
-  font-size: 14pt;
+  font-size: 22px;
   padding-right: 25px;
+}
+
+.divFiltre span {
+  font-weight: 700;
+  font-size: 18px;
+  padding: 0 10px;
 }
 
 .divFiltre .container {
@@ -173,6 +181,11 @@ main {
 .divFiltre .container .sousContainer {
   display: flex;
   gap: 25px;
+}
+
+.divFiltre .container button {
+  background-color: white;
+  padding: 0;
 }
 
 .divFiltre .container .blocFiltre {
@@ -280,14 +293,12 @@ main {
   object-position: center;
 }
 
-.divHebergement .container .card .image2 {
+.divHebergement .container .card .image2,
+.divHebergement .container .card .image6 {
   object-position: 50% 60%;
 }
 
-.divHebergement .container .card .image3 {
-  object-position: 50% 65%;
-}
-
+.divHebergement .container .card .image3,
 .divHebergement .container .card .image4 {
   object-position: 50% 65%;
 }
@@ -296,9 +307,6 @@ main {
   object-position: center;
 }
 
-.divHebergement .container .card .image6 {
-  object-position: 50% 60%;
-}
 
 .divHebergement .container .card .divDescription {
   display: flex;
@@ -327,7 +335,7 @@ main {
   color: var(--colorBlue);
 }
 
-/* -------------------- DIV POPULAIRE -------------------- */
+/* -------------------- SECTION POPULAIRE -------------------- */
 .divPopulaire {
   flex: 1 1 33%;
   background-color: var(--colorGrey);
@@ -335,9 +343,14 @@ main {
   padding: 25px 25px;
 }
 
-.divPopulaire h2 {
+.headerPopulaire {
+  padding: 0;
   display: flex;
   justify-content: space-between;
+}
+
+.headerPopulaire i {
+  font-size: 24px;
 }
 
 .divPopulaire .container {
@@ -510,19 +523,45 @@ footer a:hover {
 }
 
 /* ________________________________________ MEDIA QUERIES ________________________________________ */
-@media (max-width: 1321px){
+@media screen and (max-width: 1391px) {
 
   .divHebergement .container .card{
-    flex-basis: 40%;
+    height: 150px;
   }
 
-  .sectionActivite h3{
+  .divHebergement .container .card img {
+    height: 50%;
+  }
+
+  .divHebergement .container .card .divDescription .description h3,
+  .divHebergement .container .card .divDescription .description p,
+  .divPopulaire .container .card .divDescription .description h3,
+  .divPopulaire .container .card .divDescription .description p{
+    font-size: 14px;
+  }
+
+  .divPopulaire .container .card{
+    height: 100px;
+  }
+
+  .divPopulaire .container .card .divDescription{
+    padding: 0 25px 5px 15px;
+  }
+
+  .divPopulaire .container .card .divDescription .description h3,
+  .divPopulaire .container .card .divDescription .description p{
+    margin: 0;
+  }
+
+  .sectionActivite h3 {
     font-size: 12pt;
   }
+
 }
 
-@media (max-width: 1024px) {
-  .divPopulaire .container .card .divDescription .description h3{
+@media screen and (max-width: 1024px) {
+
+  .divPopulaire .container .card .divDescription .description h3 {
     font-size: 12pt;
   }
 
@@ -530,7 +569,7 @@ footer a:hover {
 
 
 /* ++++++++++++++++++++++++++++++ TABLETTE ++++++++++++++++++++++++++++++ */
-@media (max-width: 992px) {
+@media screen and (max-width: 992px) {
 
   /* ++++++++++++++++++++++++++++++ GENERAL ++++++++++++++++++++++++++++++ */
   header {
@@ -542,9 +581,6 @@ footer a:hover {
   }
 
   /* ------------------------------ SECTION HEADER ------------------------------ */
-  .logoBooki {
-    padding-left: 50px;
-  }
 
   /* ------------------------------ SEARCH BAR TITLE ------------------------------ */
   .searchTitle {
@@ -596,7 +632,7 @@ footer a:hover {
     gap: 10px;
   }
 
-  .divFiltre .container .blocFiltre p{
+  .divFiltre .container .blocFiltre p {
     padding: 0 20px 0 15px;
   }
 
@@ -606,26 +642,30 @@ footer a:hover {
     padding: 0;
   }
 
-  .divHebergement{
+  .divHebergement .container .card {
+    flex-basis: 40%;
+  }
+
+  .divHebergement {
     border-radius: 0;
     background-color: white;
   }
 
-  .divPopulaire{
+  .divPopulaire {
     border-radius: 0;
   }
 
-  .divPopulaire .container .card .divDescription .description h3{
+  .divPopulaire .container .card .divDescription .description h3 {
     font-size: 14pt;
   }
-  
+
   /* ------------------------------ SECTION ACTIVITE ------------------------------ */
   .sectionActivite {
     padding: 25px;
     margin-bottom: 20px;
   }
 
-  .sectionActivite h3{
+  .sectionActivite h3 {
     font-size: 14pt;
   }
 
@@ -683,11 +723,10 @@ footer a:hover {
   .blocFooter {
     flex: inherit;
   }
-
 }
 
 /* ++++++++++++++++++++++++++++++ MOBILE ++++++++++++++++++++++++++++++ */
-@media (max-width: 767px) {
+@media screen and (max-width: 767px) {
 
   /* ------------------------------ HEADER ------------------------------ */
   .logoBooki {
@@ -717,8 +756,12 @@ footer a:hover {
     min-width: inherit;
   }
 
+  .divFiltre .container .sousContainer {
+    flex-wrap: wrap;
+  }
+
   /* -------------------- DIV HEBERGEMENT -------------------- */
-  .divHebergement .container .card{
+  .divHebergement .container .card {
     flex-basis: 100%;
   }
 
